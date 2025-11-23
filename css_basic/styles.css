@@ -1,0 +1,96 @@
+/* Existing required layout styles remain unchanged */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    width: 100%;
+}
+
+article {
+    flex: 2;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #fafafa;
+    color: #222;
+    font-family: Arial, sans-serif;
+}
+
+aside {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border-left: 3px solid #eee;
+}
+
+/* Section borders */
+header, footer, article, aside {
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Make default table nicer */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background: #f0f0f0;
+    font-weight: bold;
+}
+
+/* Prevent images from stretching */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style the logo (base.css adds sizing — we add color) */
+.logo {
+    color: #e63946;    /* deep red star */
+    font-weight: bold;
+}
+
+/* Style navigation links */
+header ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+}
+
+header ul li a:hover {
+    color: #e63946;
+}
+
+/* Footer style */
+footer {
+    text-align: center;
+    background: #f7f7f7;
+    font-family: Arial, sans-serif;
+    padding: 12px;
+}
