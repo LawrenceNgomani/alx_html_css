@@ -1,55 +1,111 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Website</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Headphones - Landing</title>
+  <link rel="stylesheet" href="0-styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
-    <div class="logo">
-      <img src="images/logo_headphones.png" alt="Logo" />
-    </div>
-    <nav class="nav">
-      <a href="#">Home</a>
-      <a href="#">Features</a>
-      <a href="#">Pricing</a>
-      <a href="#">Contact</a>
+  <header class="site-header">
+    <nav class="nav container">
+      <div class="logo"> 
+        <div class="logo-mark">🔊</div>
+        <div class="logo-text">HEADPHONES</div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">what we do</a></li>
+        <li><a href="#">our results</a></li>
+        <li><a href="#">contact us</a></li>
+      </ul>
     </nav>
+
+    <section class="hero">
+      <img class="hero-bg" src="headphones_hero_1.jpg" alt="person with headphones">
+      <div class="hero-overlay container">
+        <h1>Lorem ipsum dolor set amet lorem ipsum</h1>
+        <p class="lead">Lorem ipsum dolor set amet lorem ipsum dolor set</p>
+        <a class="btn-primary" href="#">CALL TO ACTION</a>
+        <p class="hero-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+      </div>
+    </section>
   </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Your Title Here</h1>
-      <p>Your tagline or description goes here.</p>
-      <button class="btn">Get Started</button>
-    </div>
-    <div class="hero-img">
-      <img src="images/hero.png" alt="Hero" />
-    </div>
-  </section>
+  <main>
+    <section class="features container">
+      <p class="features-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
 
-  <section class="features">
-    <div class="feature">
-      <img src="images/feature1.png" />
-      <h3>Feature One</h3>
-      <p>Description</p>
-    </div>
-    <div class="feature">
-      <img src="images/feature2.png" />
-      <h3>Feature Two</h3>
-      <p>Description</p>
-    </div>
-    <div class="feature">
-      <img src="images/feature3.png" />
-      <h3>Feature Three</h3>
-      <p>Description</p>
-    </div>
-  </section>
+      <div class="feature-grid">
+        <div class="feature">
+          <svg viewBox="0 0 24 24" class="icon"><path d="M3 12h2v3H3zM7 9h2v6H7zM11 6h2v9h-2zM15 9h2v6h-2zM19 12h2v3h-2z"/></svg>
+          <h4>Feature title</h4>
+          <p>Short explanation about this feature.</p>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24" class="icon"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+          <h4>Feature title</h4>
+          <p>Short explanation about this feature.</p>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24" class="icon"><path d="M12 3v18a9 9 0 0 0 0-18z"/></svg>
+          <h4>Feature title</h4>
+          <p>Short explanation about this feature.</p>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24" class="icon"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/></svg>
+          <h4>Feature title</h4>
+          <p>Short explanation about this feature.</p>
+        </div>
+      </div>
+    </section>
 
-  <footer class="footer">
-    <p>© 2025 Your Brand</p>
+    <section class="stats-dark">
+      <div class="container stats-wrap">
+        <p class="stats-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-shape">+2%</div>
+            <p>Lorem ipsum dolor</p>
+          </div>
+          <div class="stat">
+            <div class="stat-shape">+2%</div>
+            <p>Lorem ipsum dolor</p>
+          </div>
+          <div class="stat">
+            <div class="stat-shape">+2%</div>
+            <p>Lorem ipsum dolor</p>
+          </div>
+          <div class="stat">
+            <div class="stat-shape">+2%</div>
+            <p>Lorem ipsum dolor</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact container">
+      <form class="contact-form" action="#" method="post">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="subject" placeholder="Subject">
+        <button class="btn-primary" type="submit">CALL TO ACTION</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="logo small"> <img src="logo_headphones.png" alt="logo" style="height:32px;"> </div>
+      <div class="socials">
+        <img src="favicon.png" alt="icon" style="height:20px;">
+        <img src="favicon.png" alt="icon" style="height:20px;">
+        <img src="favicon.png" alt="icon" style="height:20px;">
+      </div>
+    </div>
   </footer>
+
 </body>
 </html>
