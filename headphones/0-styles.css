@@ -1,72 +1,308 @@
-/* styles.css */
-/* Save the following content into a separate file named: styles.css */
-
-:root{
-  --bg-dark:#0f1b26;
-  --accent:#ff6b6b;
-  --muted:#9aa5b1;
-  --container:1100px;
+/* =========================
+   RESET
+========================= */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-*{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; color:#e6eef5}
-.container{max-width:var(--container);margin:0 auto;padding:0 20px}
 
-/* Header / Nav */
-.site-header{background:linear-gradient(180deg, rgba(10,20,30,0.75), rgba(10,20,30,0.85));}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-.logo{display:flex;align-items:center;gap:10px}
-.logo-mark{width:36px;height:36px;border-radius:8px;background:#1f2b36;display:flex;align-items:center;justify-content:center;font-weight:700}
-.logo-text{font-weight:700;letter-spacing:2px;color:#fff}
-.nav-links{list-style:none;display:flex;gap:24px;margin:0;padding:0}
-.nav-links a{color:rgba(255,255,255,0.9);text-decoration:none;font-weight:500;font-size:14px}
-
-/* Hero */
-.hero{position:relative;min-height:560px;display:flex;align-items:center}
-.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(60%) brightness(55%)}
-.hero-overlay{position:relative;text-align:center;padding:80px 20px;color:#fff}
-.hero h1{font-size:28px;margin:0 0 8px;font-weight:700}
-.hero .lead{font-size:15px;margin:0 0 18px;color:rgba(255,255,255,0.9)}
-.btn-primary{display:inline-block;background:var(--accent);color:#fff;padding:12px 28px;border-radius:26px;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(255,107,107,0.12)}
-.hero-copy{max-width:740px;margin:18px auto 0;color:rgba(255,255,255,0.8);line-height:1.6}
-
-/* Features */
-.features{background:#fff;color:#24343f;padding:72px 0}
-.features-intro{text-align:center;max-width:700px;margin:0 auto 36px;color:#475a66}
-.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;margin-top:28px}
-.feature{background:transparent;text-align:center;padding:12px}
-.feature .icon{width:48px;height:48px;margin:0 auto 12px;fill:none;stroke:var(--accent);stroke-width:1.5}
-.feature h4{margin:8px 0 6px;color:#20313a}
-.feature p{font-size:13px;color:#6b7b83}
-
-/* Stats dark section */
-.stats-dark{background:linear-gradient(180deg,#0e2430 0%, #0b1b26 100%);padding:72px 0}
-.stats-wrap{text-align:center;color:#dbe9f2}
-.stats{display:flex;gap:34px;justify-content:center;margin-top:28px;flex-wrap:wrap}
-.stat{width:150px}
-.stat-shape{background:var(--accent);width:100px;height:100px;margin:0 auto;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;color:#fff}
-.stat p{margin-top:10px;color:rgba(255,255,255,0.85)}
-
-/* Contact */
-.contact{padding:64px 0;background:#fff;color:#24343f}
-.contact-form{max-width:420px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
-.contact-form input{padding:14px 16px;border:1px solid #e6eef5;border-radius:6px;font-size:15px}
-.contact-form .btn-primary{align-self:center}
-
-/* Footer */
-.site-footer{background:var(--bg-dark);padding:28px 0;color:rgba(255,255,255,0.8)}
-.footer-inner{display:flex;justify-content:space-between;align-items:center}
-.logo.small .logo-text{font-size:14px}
-.socials a{margin-left:12px;color:rgba(255,255,255,0.9);text-decoration:none}
-
-/* Responsive */
-@media (max-width:900px){
-  .feature-grid{grid-template-columns:repeat(2,1fr)}
-  .hero{min-height:480px}
-  .hero h1{font-size:22px}
+/* =========================
+   VARIABLES
+========================= */
+:root {
+  --primary: #ff6565;
+  --dark: #071629;
+  --light: #ffffff;
+  --gray: #f5f5f5;
+  --max-width: 1100px;
+  --font: Arial, Helvetica, sans-serif;
 }
-@media (max-width:600px){
-  .nav-links{display:none}
-  .feature-grid{grid-template-columns:1fr}
-  .stats{flex-direction:row;gap:14px}
-  .stat{width:110px}
+
+/* =========================
+   GLOBAL
+========================= */
+body {
+  font-family: var(--font);
+  color: var(--dark);
+}
+
+a {
+  text-decoration: none;
+  color: var(--light);
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container.small {
+  max-width: 800px;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  height: 100vh;
+  background: url("images/headphones_hero_1.jpg") center/cover no-repeat;
+}
+
+.hero-overlay {
+  height: 100%;
+  background: linear-gradient(
+    rgba(7, 22, 41, 0.15),
+    rgba(7, 22, 41, 0.55)
+  );
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.logo {
+  width: 160px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+.hero-content {
+  text-align: center;
+  color: var(--light);
+  margin-top: 140px;
+}
+
+.hero-content h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  margin: 15px 0 30px;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background: var(--primary);
+  border: none;
+  color: var(--light);
+  padding: 14px 32px;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.hero-text {
+  max-width: 650px;
+  margin: 40px auto 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================
+   WHAT WE DO
+========================= */
+.what-we-do {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.what-we-do h2 {
+  font-size: 32px;
+}
+
+.section-text {
+  margin: 20px auto 60px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.section-text.light {
+  color: var(--light);
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature img {
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.feature p {
+  font-size: 14px;
+}
+
+/* =========================
+   RESULTS (FIXED)
+========================= */
+.results {
+  background: url("images/headphones_hero_2.jpg") center/cover no-repeat;
+}
+
+.results-overlay {
+  background: linear-gradient(
+    rgba(7, 22, 41, 0.20),
+    rgba(7, 22, 41, 0.60)
+  );
+  padding: 100px 0;
+  color: var(--light);
+  text-align: center;
+}
+
+.results h2 {
+  font-size: 32px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.stat {
+  position: relative;
+  text-align: center;
+}
+
+.stat img {
+  width: 120px;
+}
+
+.stat span {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  right: 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.stat p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+.contact {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 32px;
+}
+
+.contact-form {
+  max-width: 400px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-family: var(--font);
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background: var(--dark);
+  padding: 60px 0 30px;
+  color: var(--light);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 160px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-socials a {
+  width: 40px;
+  height: 40px;
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: opacity 0.3s ease;
+}
+
+.footer-socials a:hover {
+  opacity: 0.8;
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 12px;
+  opacity: 0.4;
 }
