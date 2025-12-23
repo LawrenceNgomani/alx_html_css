@@ -136,6 +136,107 @@ ul {
 }
 
 /* =========================
+   WHAT WE DO
+========================= */
+.what-we-do {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.what-we-do h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.section-text {
+  margin: 20px auto 60px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.section-text.light {
+  color: var(--light);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature img {
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.feature p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================
+   RESULTS
+========================= */
+.results {
+  background: url("images/headphones_hero_2.jpg") center/cover no-repeat;
+}
+
+.results-overlay {
+  background: linear-gradient(
+    rgba(7, 22, 41, 0.20),
+    rgba(7, 22, 41, 0.60)
+  );
+  padding: 100px 0;
+  color: var(--light);
+  text-align: center;
+}
+
+.results h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.stat {
+  position: relative;
+  text-align: center;
+}
+
+.stat img {
+  width: 120px;
+}
+
+.stat span {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  right: 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.stat p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* =========================
    RESPONSIVE - MOBILE
 ========================= */
 @media (max-width: 480px) {
@@ -157,5 +258,16 @@ ul {
 
   .hero-text {
     font-size: 12px;
+  }
+
+  .what-we-do h2,
+  .results h2 {
+    font-size: 24px;
+  }
+
+  .features,
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
